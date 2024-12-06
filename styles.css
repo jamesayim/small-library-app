@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 22, 22);
+}
+
+.library {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, 200px);
+    grid-auto-flow: row;
+    width: 1100px;
+    height: 680px;
+    padding: 40px;
+    margin: 80px auto;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    box-shadow: 4px 4px 3px rgba(22, 22, 22, 0.25);
+    border-radius: 10px;
+    color: black;
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    padding: 8px;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+.add-new-book-btn {
+    width: 150px;
+    height: 60px;
+    border: 4px solid white;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    top: 8%;
+    left: 76%;
+    cursor: pointer;
+}
+
+.add-new-book-btn:hover {
+    background-color: white;
+    color: rgb(22, 22, 22);
+}
+
+.page-title {
+    position: absolute;
+    top: 4%;
+    left: 250px;
+    font-size: 2.3rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 900;
+}
+.author {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.card-btn {
+    display: inline-flex;
+    gap: 10px;
+    width: 270px;
+    height: 50px;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    top: 35px;
+    justify-content: center;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+.card-btn button {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    cursor: pointer;
+}
+.card-btn button:hover {
+    color: white;
+    background-color: rgba(22, 22, 22, 1);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 4px rgba(22, 22, 22, 0.25);
+}
+
+dialog {
+    width: 60%;
+    height: 70%;
+    border: 2px solid rgba(22, 22, 22, 0.25);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+dialog[open] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+#myDialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+form {
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    height: 350px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, 75px);
+    gap: 10px;
+}
+
+form > p {
+    font-size: 2rem;
+    padding: 20px;
+    font-weight: 900;
+    text-align: center;
+    grid-column: span 2;
+}
+
+label {
+    font-size: 1.2rem;
+    display: block;
+    font-weight: 600;
+}
+
+input {
+    width: 280px;
+    height: 30px;
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-flex;
+}
+
+.inline {
+    padding: 10px;
+}
+
+select {
+    width: 210px;
+    height: 30px;
+    outline: none;
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    border-radius: 10px;
+    padding: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.01rem;
+}
+
+form button {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    cursor: pointer;
+}
+
+.inline p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+form button {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+    font-size: 1.2rem;
+    grid-column: span 2;
+    margin-top: 20px;
+    margin-left: 83%;
+}
+
+form button:hover {
+    background-color: rgba(22, 22, 22, 1);
+    color: white;
+}
+.close-dialog-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(22, 22, 22, 0.25);
+    text-align: center;
+    margin-left: 730px;
+}
+.close-dialog-btn:hover {
+    background-color: rgba(22, 22, 22, 1);
+    color: white;
+}
+
+.hasRead {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.hasRead::before {
+    content: "* ";
+    color: rgba(255, 0, 119, 0.897);
+    border: 1px solid;
+    border-radius: 50%;
+    margin: 6px;
+}

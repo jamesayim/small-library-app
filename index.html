@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="page-title">My Library</h1>
+    <button class="add-new-book-btn" type="button">New Book</button>
+    <div class="library">
+        <div class="card">
+            <p class="title">Perfect Storm</p>
+            <p class="author">Dirk Reinhardt</p>
+            <p class="number-of-pages">Number of pages: 431</p>
+            <p class="hasRead">Has read it</p>
+            <div class="card-btn">
+                <button class="delete-book">Delete</button>
+                <button class="hasReadBtn">Read</button>
+            </div>
+        </div>
+        <div class="card">
+            <p class="title">Golder Hour</p>
+            <p class="author">John Smith</p>
+            <p class="number-of-pages">Number of pages: 230</p>
+            <p class="hasRead">Not read</p>
+            <div class="card-btn">
+                <button class="delete-book">Delete</button>
+                <button class="hasReadBtn">Has read it</button>
+            </div>
+        </div>
+        <div class="card">
+            <p class="title">The Last Breathe</p>
+            <p class="author">Thomas Clarke</p>
+            <p class="number-of-pages">Number of pages: 102</p>
+            <p class="hasRead">Has read it</p>
+            <div class="card-btn">
+                <button class="delete-book">Delete</button>
+                <button class="hasReadBtn">Read</button>
+            </div>
+        </div>
+    </div>
+    <dialog id="myDialog">
+        <button class="close-dialog-btn">x</button>
+        <form class="book-form" method="dialog">
+            <p>Add a new book to library</p>
+
+            <div class="title-container inline">
+                <label for="title-input">Title</label>
+                <input name="title" type="text" id="title-input" required>
+            </div>
+
+            <div class="author-container inline">
+                <label for="author-input">Author</label>
+                <input name="author" type="text" id="author-input" required>
+            </div>
+
+            <div class="pages-container inline">
+                <label for="pages-input">Number of Pages</label>
+                <input name="pages" type="number" id="pages-input" required>
+            </div>
+
+            <div class="inline">
+                <p>Have you read it?</p>
+                <select name="hasReadIt" id="select-input" required>
+                    <option hidden selected value="none">Select</option>
+                    <option value="have read it">Yes</option>
+                    <option value="have not read">No</option>
+                </select>
+            </div>
+            <div class="inline">
+                <button class="add-btn" type="button">Add</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>
